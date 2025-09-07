@@ -394,14 +394,14 @@ _Si este proyecto te ayuda en tu aprendizaje, considera darle una ⭐_
 
 </div>
 
-## �‍💻 Autor
+## Autor
 
 <div align="center">
 
 **Juan Felipe Reyes Sánchez**
 
 [![GitHub](https://img.shields.io/badge/GitHub-felipesanchez--dev-black?style=for-the-badge&logo=github)](https://github.com/felipesanchez-dev)
-[![Email](https://img.shields.io/badge/Email-contact.dev@example.com-red?style=for-the-badge&logo=gmail)](mailto:contact.dev@example.com)
+[![Email](https://img.shields.io/badge/Email-jfelipe9.121@gmail.com-red?style=for-the-badge&logo=gmail)](jfelipe9.121@gmail.com)
 
 _Desarrollador apasionado por la computación cuántica y las tecnologías emergentes_
 
@@ -409,7 +409,7 @@ _Desarrollador apasionado por la computación cuántica y las tecnologías emerg
 
 ---
 
-## �🙏 Agradecimientos
+## Agradecimientos
 
 Esta librería implementa los principios fundamentales de la mecánica cuántica y computación cuántica de manera educativa y práctica, siguiendo las mejores prácticas de desarrollo de software moderno.
 
