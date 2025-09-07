@@ -1,20 +1,101 @@
-# Qubit Simulator
+<div align="center">
 
-Una librería completa de simulación cuántica para JavaScript/TypeScript que permite simular qubits y compuertas cuánticas de manera matemáticamente coherente y funcional.
+# 🚀 Qubit Simulator
+
+### _Simulación cuántica para JavaScript/TypeScript_
+
+[![Version](https://img.shields.io/badge/version-0.0.1--dev-orange.svg)](https://github.com/felipesanchez-dev/qkits-simulator)
+[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
+[![Development Status](https://img.shields.io/badge/status-in%20development-yellow.svg)](https://github.com/felipesanchez-dev/qkits-simulator)
+[![TypeScript](https://img.shields.io/badge/TypeScript-4.9+-blue.svg)](https://www.typescriptlang.org/)
+[![Node.js](https://img.shields.io/badge/Node.js-16+-green.svg)](https://nodejs.org/)
+
+```
+     ┌─────┐     ┌─────┐     ┌─────┐
+  |0⟩│  H  │──●──│  X  │──●──│  M  │
+     └─────┘  │  └─────┘  │  └─────┘
+     ┌─────┐  │  ┌─────┐  │  ┌─────┐
+  |0⟩│     │──⊕──│     │──⊕──│  M  │
+     └─────┘     └─────┘     └─────┘
+```
+
+_Una librería completa de simulación cuántica que permite simular qubits y compuertas cuánticas de manera matemáticamente coherente y funcional._
+
+</div>
+
+---
 
 ## 🌟 Características
 
-- ✅ **Matemáticamente riguroso**: Basado en vectores de estado y matrices unitarias
-- ✅ **TypeScript completo**: Tipado fuerte y IntelliSense completo
-- ✅ **Arquitectura limpia**: Separación clara entre dominio, aplicación e infraestructura
-- ✅ **Soporte completo de compuertas**: X, Y, Z, H, CNOT, rotaciones Rx/Ry/Rz, y más
-- ✅ **Simulación de múltiples qubits**: Productos tensoriales y entrelazamiento
-- ✅ **Medición cuántica**: Colapso de estado con probabilidades correctas
-- ✅ **Formatos duales**: CommonJS y ESM
+<table align="center">
+<tr>
+<td align="center" width="50%">
+
+### 🧮 **Rigor Matemático**
+
+✅ Vectores de estado normalizados  
+✅ Matrices unitarias  
+✅ Productos tensoriales correctos  
+✅ Conservación de probabilidades
+
+</td>
+<td align="center" width="50%">
+
+### 💻 **Developer Experience**
+
+✅ TypeScript completo  
+✅ IntelliSense total  
+✅ CommonJS y ESM  
+✅ Arquitectura limpia
+
+</td>
+</tr>
+<tr>
+<td align="center" width="50%">
+
+### ⚛️ **Funcionalidades Cuánticas**
+
+✅ Compuertas básicas (X, Y, Z, H)  
+✅ Rotaciones (Rx, Ry, Rz)  
+✅ Compuertas CNOT, CZ, SWAP  
+✅ Estados entrelazados
+
+</td>
+<td align="center" width="50%">
+
+### 🔬 **Simulación Avanzada**
+
+✅ Múltiples qubits  
+✅ Medición cuántica  
+✅ Estados de Bell y GHZ  
+✅ Superposición cuántica
+
+</td>
+</tr>
+</table>
 
 ## 📦 Instalación
 
+> ⚠️ **Nota**: Esta librería está actualmente en desarrollo (v0.0.1) y aún no ha sido publicada en npm.
+
+### Para desarrollo local:
+
 ```bash
+# Clonar el repositorio
+git clone https://github.com/felipesanchez-dev/qkits-simulator.git
+cd qkits-simulator
+
+# Instalar dependencias
+npm install
+
+# Compilar el proyecto
+npm run build
+```
+
+### Próximamente en npm:
+
+```bash
+# Una vez publicado estará disponible como:
 npm install qkits-simulator
 ```
 
@@ -23,7 +104,7 @@ npm install qkits-simulator
 ### Ejemplo básico con qubit individual
 
 ```typescript
-import { QKits, Gates } from 'qkits-simulator';
+import { QKits, Gates } from "qkits-simulator";
 
 // Crear un qubit en estado |0⟩
 const qubit = QKits.createQubit();
@@ -41,7 +122,7 @@ console.log(`Resultado: ${result}`); // 0 o 1 con 50% probabilidad cada uno
 ### Ejemplo con circuito cuántico de 2 qubits
 
 ```typescript
-import { QKits, Gates } from 'qkits-simulator';
+import { QKits, Gates } from "qkits-simulator";
 
 // Crear circuito de 2 qubits
 const circuit = QKits.createCircuit(2);
@@ -62,6 +143,7 @@ console.log(result); // "00" o "11" con 50% probabilidad cada uno (estado de Bel
 ### Clases principales
 
 #### `QKits` - Factory principal
+
 ```typescript
 // Crear componentes
 const qubit = QKits.createQubit();
@@ -74,14 +156,15 @@ const measurement = QKits.measurement;
 ```
 
 #### `Qubit` - Representación de un qubit individual
+
 ```typescript
-import { Qubit, ComplexNumber } from 'qkits-simulator';
+import { Qubit, ComplexNumber } from "qkits-simulator";
 
 // Crear qubits en diferentes estados
-const zero = Qubit.zero();           // |0⟩
-const one = Qubit.one();             // |1⟩
-const plus = Qubit.plus();           // |+⟩ = (|0⟩ + |1⟩)/√2
-const minus = Qubit.minus();         // |-⟩ = (|0⟩ - |1⟩)/√2
+const zero = Qubit.zero(); // |0⟩
+const one = Qubit.one(); // |1⟩
+const plus = Qubit.plus(); // |+⟩ = (|0⟩ + |1⟩)/√2
+const minus = Qubit.minus(); // |-⟩ = (|0⟩ - |1⟩)/√2
 
 // Crear con amplitudes personalizadas
 const alpha = new ComplexNumber(0.6, 0);
@@ -89,26 +172,27 @@ const beta = new ComplexNumber(0.8, 0);
 const custom = Qubit.fromAmplitudes(alpha, beta);
 
 // Obtener información
-console.log(qubit.getProbabilityZero());  // Probabilidad de medir |0⟩
-console.log(qubit.getProbabilityOne());   // Probabilidad de medir |1⟩
-console.log(qubit.isInSuperposition());   // ¿Está en superposición?
+console.log(qubit.getProbabilityZero()); // Probabilidad de medir |0⟩
+console.log(qubit.getProbabilityOne()); // Probabilidad de medir |1⟩
+console.log(qubit.isInSuperposition()); // ¿Está en superposición?
 ```
 
 #### `QuantumCircuit` - Circuito con múltiples qubits
+
 ```typescript
 const circuit = QKits.createCircuit(3);
 
 // Aplicar compuertas a qubits específicos
-circuit.applyGate(Gates.H(), 0);     // Hadamard al qubit 0
-circuit.applyGate(Gates.X(), 1);     // Pauli-X al qubit 1
-circuit.applyGate(Gates.Rz(Math.PI/4), 2); // Rotación Z al qubit 2
+circuit.applyGate(Gates.H(), 0); // Hadamard al qubit 0
+circuit.applyGate(Gates.X(), 1); // Pauli-X al qubit 1
+circuit.applyGate(Gates.Rz(Math.PI / 4), 2); // Rotación Z al qubit 2
 
 // Compuertas de dos qubits
-circuit.applyCNOT(0, 1);             // CNOT control=0, target=1
+circuit.applyCNOT(0, 1); // CNOT control=0, target=1
 
 // Medición
-const singleResult = circuit.measureQubit(0);    // Medir qubit específico
-const allResults = circuit.measureAll();         // Medir todos los qubits
+const singleResult = circuit.measureQubit(0); // Medir qubit específico
+const allResults = circuit.measureAll(); // Medir todos los qubits
 
 // Obtener probabilidades sin colapsar el estado
 const probs = circuit.getMeasurementProbabilities();
@@ -117,44 +201,47 @@ const probs = circuit.getMeasurementProbabilities();
 ### Compuertas cuánticas disponibles
 
 #### Compuertas de un solo qubit
+
 ```typescript
-import { Gates } from 'qkits-simulator';
+import { Gates } from "qkits-simulator";
 
 // Compuertas Pauli
-Gates.X()    // Pauli-X (NOT cuántica)
-Gates.Y()    // Pauli-Y
-Gates.Z()    // Pauli-Z
+Gates.X(); // Pauli-X (NOT cuántica)
+Gates.Y(); // Pauli-Y
+Gates.Z(); // Pauli-Z
 
 // Hadamard y otras
-Gates.H()    // Hadamard (crea superposición)
-Gates.I()    // Identidad
-Gates.S()    // Compuerta de fase
-Gates.T()    // Compuerta T (π/8)
+Gates.H(); // Hadamard (crea superposición)
+Gates.I(); // Identidad
+Gates.S(); // Compuerta de fase
+Gates.T(); // Compuerta T (π/8)
 
 // Rotaciones parametrizadas
-Gates.Rx(angle)  // Rotación alrededor del eje X
-Gates.Ry(angle)  // Rotación alrededor del eje Y
-Gates.Rz(angle)  // Rotación alrededor del eje Z
+Gates.Rx(angle); // Rotación alrededor del eje X
+Gates.Ry(angle); // Rotación alrededor del eje Y
+Gates.Rz(angle); // Rotación alrededor del eje Z
 ```
 
 #### Compuertas de dos qubits
+
 ```typescript
 // Usar directamente en el circuito
 circuit.applyCNOT(control, target);
 
 // O crear las compuertas
-Gates.CNOT()  // Controlled-NOT
-Gates.CZ()    // Controlled-Z
-Gates.SWAP()  // Intercambio de qubits
+Gates.CNOT(); // Controlled-NOT
+Gates.CZ(); // Controlled-Z
+Gates.SWAP(); // Intercambio de qubits
 ```
 
 ### Números complejos
-```typescript
-import { ComplexNumber } from 'qkits-simulator';
 
-const c1 = new ComplexNumber(3, 4);           // 3 + 4i
-const c2 = ComplexNumber.fromReal(5);         // 5 + 0i
-const c3 = ComplexNumber.fromImaginary(2);    // 0 + 2i
+```typescript
+import { ComplexNumber } from "qkits-simulator";
+
+const c1 = new ComplexNumber(3, 4); // 3 + 4i
+const c2 = ComplexNumber.fromReal(5); // 5 + 0i
+const c3 = ComplexNumber.fromImaginary(2); // 0 + 2i
 
 // Operaciones
 const sum = c1.add(c2);
@@ -166,6 +253,7 @@ const magnitude = c1.magnitude();
 ## 🧮 Ejemplos avanzados
 
 ### Estado de Bell (entrelazamiento)
+
 ```typescript
 const circuit = QKits.createCircuit(2);
 
@@ -179,6 +267,7 @@ console.log(probs); // [0.5, 0, 0, 0.5] - Solo |00⟩ y |11⟩ tienen probabilid
 ```
 
 ### Estado GHZ (3 qubits entrelazados)
+
 ```typescript
 const circuit = QKits.createCircuit(3);
 
@@ -191,6 +280,7 @@ console.log(circuit.toString()); // Ver la representación del estado
 ```
 
 ### Rotaciones y fases
+
 ```typescript
 const qubit = QKits.createQubit();
 
@@ -200,65 +290,135 @@ const newState = ryGate.apply(qubit.getState());
 qubit.setState(newState);
 
 console.log(qubit.getProbabilityZero()); // ~0.75
-console.log(qubit.getProbabilityOne());  // ~0.25
+console.log(qubit.getProbabilityOne()); // ~0.25
 ```
 
 ## 🏗️ Arquitectura
 
 La librería sigue los principios de **Clean Architecture** con clara separación de responsabilidades:
 
-### Capa de Dominio
-- `ComplexNumber`: Números complejos para amplitudes cuánticas
-- `QuantumState`: Estados cuánticos como vectores complejos
-- `Qubit`: Entidad de qubit individual
-- `QuantumCircuit`: Entidad de circuito con múltiples qubits
-
-### Capa de Aplicación
-- `QuantumMeasurementService`: Lógica de medición cuántica
-- `QubitUseCase`: Casos de uso para operaciones con qubits
-- `QuantumCircuitUseCase`: Casos de uso para circuitos
-
-### Capa de Infraestructura
-- `MatrixOperations`: Operaciones matemáticas con matrices
-- `QuantumGates`: Implementaciones de compuertas cuánticas
-- `GateFactory`: Factory para crear compuertas
+```
+┌─────────────────────────────────────────────────────────────┐
+│                    🎯 Capa de Dominio                        │
+├─────────────────────────────────────────────────────────────┤
+│ • ComplexNumber     → Números complejos para amplitudes    │
+│ • QuantumState      → Estados cuánticos como vectores      │
+│ • Qubit             → Entidad de qubit individual          │
+│ • QuantumCircuit    → Entidad de circuito múltiple         │
+└─────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────────┐
+│                  🔄 Capa de Aplicación                       │
+├─────────────────────────────────────────────────────────────┤
+│ • QuantumMeasurementService → Lógica de medición cuántica  │
+│ • QubitUseCase             → Casos de uso para qubits      │
+│ • QuantumCircuitUseCase    → Casos de uso para circuitos   │
+└─────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────────┐
+│                🔧 Capa de Infraestructura                    │
+├─────────────────────────────────────────────────────────────┤
+│ • MatrixOperations  → Operaciones matemáticas con matrices │
+│ • QuantumGates      → Implementaciones de compuertas       │
+│ • GateFactory       → Factory para crear compuertas        │
+└─────────────────────────────────────────────────────────────┘
+```
 
 ## 🧪 Validación matemática
 
-Todas las operaciones son matemáticamente rigurosas:
+<div align="center">
 
-- ✅ Los estados cuánticos están siempre normalizados (|α|² + |β|² = 1)
-- ✅ Las compuertas son matrices unitarias (U × U† = I)
-- ✅ Las mediciones conservan la probabilidad total
-- ✅ Los productos tensoriales implementan correctamente el entrelazamiento
-- ✅ Las rotaciones utilizan las fórmulas correctas de mecánica cuántica
+### 🎯 **Rigor Matemático Garantizado**
+
+| Aspecto                   | Validación                           | Fórmula                        |
+| ------------------------- | ------------------------------------ | ------------------------------ |
+| **Normalización**         | ✅ Estados siempre normalizados      | \|α\|² + \|β\|² = 1            |
+| **Unitariedad**           | ✅ Compuertas son matrices unitarias | U × U† = I                     |
+| **Conservación**          | ✅ Probabilidades se conservan       | ∑P(estados) = 1                |
+| **Productos Tensoriales** | ✅ Entrelazamiento correcto          | \|ψ⟩ = α\|00⟩ + β\|11⟩         |
+| **Rotaciones**            | ✅ Fórmulas de mecánica cuántica     | R(θ) = cos(θ/2)I - i sin(θ/2)σ |
+
+</div>
 
 ## 📝 Scripts disponibles
 
-```bash
-npm run build     # Compilar TypeScript a JavaScript
-npm run dev       # Compilar en modo watch
-npm test          # Ejecutar tests (cuando estén implementados)
-```
+| Script       | Descripción                      | Comando         |
+| ------------ | -------------------------------- | --------------- |
+| 🔨 **Build** | Compilar TypeScript a JavaScript | `npm run build` |
+| 👀 **Dev**   | Compilar en modo watch           | `npm run dev`   |
+| 🧪 **Test**  | Ejecutar tests (próximamente)    | `npm test`      |
+| 🧹 **Clean** | Limpiar archivos compilados      | `npm run clean` |
 
 ## 🤝 Contribuir
 
-Las contribuciones son bienvenidas. Por favor:
+¡Las contribuciones son más que bienvenidas! Este es un proyecto educativo y toda ayuda es valiosa.
 
-1. Fork el repositorio
-2. Crea una rama para tu feature (`git checkout -b feature/nueva-funcionalidad`)
-3. Commit tus cambios (`git commit -am 'Agregar nueva funcionalidad'`)
-4. Push a la rama (`git push origin feature/nueva-funcionalidad`)
-5. Abre un Pull Request
+<div align="center">
+
+### 🛠️ **Proceso de Contribución**
+
+</div>
+
+| Paso | Acción                         | Comando                                                       |
+| ---- | ------------------------------ | ------------------------------------------------------------- |
+| 1️⃣   | **Fork** el repositorio        | `git clone https://github.com/tu-usuario/qkits-simulator.git` |
+| 2️⃣   | **Crear** rama para tu feature | `git checkout -b feature/nueva-funcionalidad`                 |
+| 3️⃣   | **Commit** tus cambios         | `git commit -am 'Agregar nueva funcionalidad'`                |
+| 4️⃣   | **Push** a la rama             | `git push origin feature/nueva-funcionalidad`                 |
+| 5️⃣   | **Abrir** Pull Request         | Desde GitHub → New Pull Request                               |
+
+### 💡 ¿Cómo puedes ayudar?
+
+- 🐛 **Reportar bugs** matemáticos o de implementación
+- 📚 **Mejorar documentación** y ejemplos
+- ⚡ **Optimizar** algoritmos cuánticos
+- 🧪 **Agregar tests** unitarios e integración
+- 🌟 **Proponer nuevas** funcionalidades cuánticas
 
 ## 📄 Licencia
 
-ISC License
-
-## 🙏 Agradecimientos
-
-Esta librería implementa los principios fundamentales de la mecánica cuántica y computación cuántica de manera educativa y práctica, siguiendo las mejores prácticas de desarrollo de software moderno. Tambien quiero aclarar que si las operaciones matematicas fallan o tienen errores, haganmelo saber ya que apenas estoy comenzando en este mundo de la computacion cuantica y se me ocurrio esta idea de hacer esta libreria para aprender mas sobre este fascinante mundo de la computacion cuantica.
+**ISC License** - Ver el archivo [LICENSE](LICENSE) para más detalles.
 
 ---
 
-**QKits Simulator** - Llevando la computación cuántica al mundo de JavaScript/TypeScript 🚀
+<div align="center">
+
+### 🚀 **Qubit Simulator**
+
+_Llevando la computación cuántica al mundo de JavaScript/TypeScript_
+
+**Hecho por [Juan Felipe Reyes Sánchez](https://github.com/felipesanchez-dev)**
+
+[![Star this repo](https://img.shields.io/github/stars/felipesanchez-dev/qkits-simulator?style=social)](https://github.com/felipesanchez-dev/qkits-simulator)
+[![Follow me](https://img.shields.io/github/followers/felipesanchez-dev?style=social)](https://github.com/felipesanchez-dev)
+
+_Si este proyecto te ayuda en tu aprendizaje, considera darle una ⭐_
+
+</div>
+
+## �‍💻 Autor
+
+<div align="center">
+
+**Juan Felipe Reyes Sánchez**
+
+[![GitHub](https://img.shields.io/badge/GitHub-felipesanchez--dev-black?style=for-the-badge&logo=github)](https://github.com/felipesanchez-dev)
+[![Email](https://img.shields.io/badge/Email-contact.dev@example.com-red?style=for-the-badge&logo=gmail)](mailto:contact.dev@example.com)
+
+_Desarrollador apasionado por la computación cuántica y las tecnologías emergentes_
+
+</div>
+
+---
+
+## �🙏 Agradecimientos
+
+Esta librería implementa los principios fundamentales de la mecánica cuántica y computación cuántica de manera educativa y práctica, siguiendo las mejores prácticas de desarrollo de software moderno.
+
+### 🌟 Reconocimientos especiales
+
+Un agradecimiento especial a **Miguel Alfonso Martínez** y su repositorio [QuantumChicken](https://github.com/miguelalfonso-dev/QuantumChicken), que fue una fuente de inspiración y aprendizaje fundamental en mi comprensión de la computación cuántica. Su trabajo me ayudó a entender mejor los conceptos matemáticos y las implementaciones prácticas.
+
+### 📚 Nota personal
+
+Quiero ser transparente: **este proyecto es un esfuerzo educativo** y estoy comenzando mi viaje en el fascinante mundo de la computación cuántica. Si encuentras errores matemáticos o conceptuales, te agradecería enormemente que me los hagas saber. Estoy aquí para aprender y mejorar, y toda retroalimentación constructiva es bienvenida.
+
+La computación cuántica es un campo complejo y en constante evolución, y aunque he puesto mi mejor esfuerzo en implementar correctamente los principios fundamentales, siempre hay espacio para mejorar y corregir. Tu experiencia y conocimientos pueden ayudar a hacer de esta librería una mejor herramienta educativa para toda la comunidad.

@@ -33,7 +33,30 @@
     "gates",
     "typescript"
   ],
-  "author": "Juan Felipe Reyes Sanchez",
+  "author": {
+    "name": "Juan Felipe Reyes Sanchez",
+    "email": "jfelipe9.121@gmail.com",
+    "url": "https://github.com/felipesanchez-dev"
+  },
+  "contributors": [
+    {
+      "name": "Miguel Alfonso Martínez",
+      "url": "https://github.com/ui4054/QuantumChicken",
+      "contribution": "Inspiración, guía y recursos de aprendizaje en computación cuántica"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/felipesanchez-dev/qubit-simulator.git"
+  },
+  "homepage": "https://github.com/felipesanchez-dev/qubit-simulator#readme",
+  "bugs": {
+    "url": "https://github.com/felipesanchez-dev/qubit-simulator/issues"
+  },
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/felipesanchez-dev"
+  },
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^22.5.5",
