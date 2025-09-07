@@ -401,7 +401,6 @@ _Si este proyecto te ayuda en tu aprendizaje, considera darle una ⭐_
 **Juan Felipe Reyes Sánchez**
 
 [![GitHub](https://img.shields.io/badge/GitHub-felipesanchez--dev-black?style=for-the-badge&logo=github)](https://github.com/felipesanchez-dev)
-[![Email](https://img.shields.io/badge/Email-jfelipe9.121@gmail.com-red?style=for-the-badge&logo=gmail)](jfelipe9.121@gmail.com)
 
 _Desarrollador apasionado por la computación cuántica y las tecnologías emergentes_
 
