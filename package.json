@@ -1,0 +1,43 @@
+{
+  "name": "qubit-simulator",
+  "version": "0.0.1",
+  "description": "A quantum computing simulator library for qubits and quantum gates",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "npm run build && npm run test:examples",
+    "test:examples": "npm run example:basic && npm run example:circuit && npm run example:test",
+    "example:basic": "npx tsc examples/basic-qubit.ts --outDir dist/examples --moduleResolution node --module commonjs --target es2020 && node dist/examples/examples/basic-qubit.js",
+    "example:circuit": "npx tsc examples/quantum-circuit.ts --outDir dist/examples --moduleResolution node --module commonjs --target es2020 && node dist/examples/examples/quantum-circuit.js",
+    "example:test": "npx tsc examples/test-functionality.ts --outDir dist/examples --moduleResolution node --module commonjs --target es2020 && node dist/examples/examples/test-functionality.js",
+    "prepublishOnly": "npm run build && npm run test"
+  },
+  "keywords": [
+    "quantum",
+    "qubit",
+    "simulation",
+    "quantum-computing",
+    "gates",
+    "typescript"
+  ],
+  "author": "Juan Felipe Reyes Sanchez",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^22.5.5",
+    "tsup": "^8.2.4",
+    "typescript": "^5.6.2"
+  }
+}
