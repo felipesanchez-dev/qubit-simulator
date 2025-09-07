@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🚀 Qubit Simulator
+# 🚀 Qubit Simulator (Qkits)
 
 ### _Simulación cuántica para JavaScript/TypeScript_
 
@@ -82,8 +82,8 @@ _Una librería completa de simulación cuántica que permite simular qubits y co
 
 ```bash
 # Clonar el repositorio
-git clone https://github.com/felipesanchez-dev/qkits-simulator.git
-cd qkits-simulator
+git clone https://github.com/felipesanchez-dev/qubit-simulator.git
+cd qubit-simulator
 
 # Instalar dependencias
 npm install
