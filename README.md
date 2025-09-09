@@ -107,21 +107,21 @@ npm install qubit-simulator @types/node
 
 ### ⚠️ **Límites importantes de rendimiento:**
 
-| Qubits | Estados | Memoria | Recomendación |
-|--------|---------|---------|---------------|
-| 1-15   | 2¹⁵     | < 1 MB  | ✅ Perfecto para uso educativo |
+| Qubits | Estados | Memoria   | Recomendación                        |
+| ------ | ------- | --------- | ------------------------------------ |
+| 1-15   | 2¹⁵     | < 1 MB    | ✅ Perfecto para uso educativo       |
 | 16-25  | 2²⁵     | 16-512 MB | ⚠️ Precaución: aparecerá advertencia |
-| 26+    | 2²⁶+    | > 1 GB  | ❌ Bloqueado automáticamente |
+| 26+    | 2²⁶+    | > 1 GB    | ❌ Bloqueado automáticamente         |
 
 ```typescript
 // ✅ Permitido
 const smallCircuit = QKits.createCircuit(15);
 
 // ⚠️ Con advertencia
-const mediumCircuit = QKits.createCircuit(20); 
+const mediumCircuit = QKits.createCircuit(20);
 // Warning: 20-qubit simulation requires ~16.00 MB of memory
 
-// ❌ Bloqueado automáticamente  
+// ❌ Bloqueado automáticamente
 const largeCircuit = QKits.createCircuit(30);
 // Error: limited to 25 qubits to prevent memory issues
 ```

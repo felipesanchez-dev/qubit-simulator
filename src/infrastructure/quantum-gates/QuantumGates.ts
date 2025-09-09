@@ -189,7 +189,7 @@ export class RxGate extends BaseQuantumGate {
     if (!Number.isFinite(angle)) {
       throw new Error(`Rx gate angle must be a finite number, got: ${angle}`);
     }
-    
+
     const cos_half = Math.cos(angle / 2);
     const sin_half = Math.sin(angle / 2);
     const matrix = [

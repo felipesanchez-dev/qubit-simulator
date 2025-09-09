@@ -8,6 +8,7 @@ y este proyecto adhiere al [Semantic Versioning](https://semver.org/spec/v2.0.0.
 ## [0.0.1] - 2025-09-07
 
 ### Corregido
+
 - ✅ Nombre del paquete corregido de "qubit-simulator" a "qkits-simulator"
 - ✅ Referencias en README.md actualizadas
 - ✅ package-lock.json regenerado con el nombre correcto
@@ -15,6 +16,7 @@ y este proyecto adhiere al [Semantic Versioning](https://semver.org/spec/v2.0.0.
 ## [0.0.1] - 2025-09-07
 
 ### Agregado
+
 - ✅ Implementación completa de la librería QKits Simulator
 - ✅ Arquitectura limpia con separación de responsabilidades
 - ✅ Soporte completo para números complejos (`ComplexNumber`)
@@ -39,6 +41,7 @@ y este proyecto adhiere al [Semantic Versioning](https://semver.org/spec/v2.0.0.
 - ✅ Tests de funcionalidad básica
 
 ### Características Matemáticas
+
 - ✅ Estados cuánticos siempre normalizados
 - ✅ Compuertas verificadas como unitarias
 - ✅ Productos tensoriales para múltiples qubits
@@ -46,6 +49,7 @@ y este proyecto adhiere al [Semantic Versioning](https://semver.org/spec/v2.0.0.
 - ✅ Entrelazamiento cuántico (estados de Bell, GHZ)
 
 ### Ejemplos Incluidos
+
 - ✅ Operaciones básicas con qubits individuales
 - ✅ Circuitos cuánticos con múltiples qubits
 - ✅ Creación de estados de Bell
@@ -53,12 +57,14 @@ y este proyecto adhiere al [Semantic Versioning](https://semver.org/spec/v2.0.0.
 - ✅ Tests de validación funcional
 
 ### Infraestructura
+
 - ✅ TypeScript con tipado fuerte
 - ✅ Configuración tsup para dual build
 - ✅ Scripts NPM para build y testing
 - ✅ Estructura de proyecto escalable
 
 ### Documentación
+
 - ✅ README.md completo con ejemplos
 - ✅ Documentación de arquitectura
 - ✅ Ejemplos comentados
@@ -67,6 +73,7 @@ y este proyecto adhiere al [Semantic Versioning](https://semver.org/spec/v2.0.0.
 ## Planes Futuros (v1.1.0)
 
 ### Candidatos para Próximas Versiones
+
 - [ ] Tests unitarios con framework de testing (Jest/Vitest)
 - [ ] Más compuertas cuánticas (Toffoli, Fredkin)
 - [ ] Algoritmos cuánticos clásicos (Deutsch-Jozsa, Grover completo)
@@ -76,6 +83,7 @@ y este proyecto adhiere al [Semantic Versioning](https://semver.org/spec/v2.0.0.
 - [ ] Export a formatos de circuitos estándar (QASM)
 
 ### Mejoras Técnicas Futuras
+
 - [ ] Lazy evaluation para circuitos grandes
 - [ ] Paralelización de operaciones matriciales
 - [ ] Soporte para sparse matrices
@@ -83,11 +91,13 @@ y este proyecto adhiere al [Semantic Versioning](https://semver.org/spec/v2.0.0.
 - [ ] Plugin system para extensiones
 
 ---
+
 ## [0.0.2] - 2025-09-09
+
 ### Documentación
+
 - [✅] Actualización de la documentación de instalación, uso y análisis de rendimiento; incluye ejemplos y validaciones
 - [✅] Implementación de validaciones de límites en QuantumCircuit y compuertas cuánticas
 - [✅] Añadidas pruebas para límites de qubits y validaciones de compuertas
-
 
 **Nota**: Esta es la primera versión 0.0.1 de QKits Simulator. La API se considera estable y seguirá semantic versioning para cambios futuros.
