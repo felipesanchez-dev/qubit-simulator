@@ -4,9 +4,9 @@
 
 ### _Simulación cuántica para JavaScript/TypeScript_
 
-[![Version](https://img.shields.io/badge/version-0.0.1--dev-orange.svg)](https://github.com/felipesanchez-dev/qkits-simulator)
+[![Version](https://img.shields.io/badge/version-0.0.1--dev-orange.svg)](https://github.com/felipesanchez-dev/qubit-simulator)
 [![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
-[![Development Status](https://img.shields.io/badge/status-in%20development-yellow.svg)](https://github.com/felipesanchez-dev/qkits-simulator)
+[![Development Status](https://img.shields.io/badge/status-in%20development-yellow.svg)](https://github.com/felipesanchez-dev/qubit-simulator)
 [![TypeScript](https://img.shields.io/badge/TypeScript-4.9+-blue.svg)](https://www.typescriptlang.org/)
 [![Node.js](https://img.shields.io/badge/Node.js-16+-green.svg)](https://nodejs.org/)
 
@@ -96,7 +96,7 @@ npm run build
 
 ```bash
 # Una vez publicado estará disponible como:
-npm install qkits-simulator
+npm install qubit-simulator
 ```
 
 ## 🚀 Uso rápido
