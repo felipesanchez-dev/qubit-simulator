@@ -1,6 +1,6 @@
 {
   "name": "qubit-simulator",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A quantum computing simulator library for qubits and quantum gates",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",

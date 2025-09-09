@@ -5,14 +5,14 @@ Todos los cambios notables a este proyecto serán documentados en este archivo.
 El formato está basado en [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 y este proyecto adhiere al [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.0.1] - 2025-09-07
+## [0.0.1] - 2025-09-07
 
 ### Corregido
 - ✅ Nombre del paquete corregido de "qubit-simulator" a "qkits-simulator"
 - ✅ Referencias en README.md actualizadas
 - ✅ package-lock.json regenerado con el nombre correcto
 
-## [1.0.0] - 2025-09-07
+## [0.0.1] - 2025-09-07
 
 ### Agregado
 - ✅ Implementación completa de la librería QKits Simulator
@@ -83,5 +83,11 @@ y este proyecto adhiere al [Semantic Versioning](https://semver.org/spec/v2.0.0.
 - [ ] Plugin system para extensiones
 
 ---
+## [0.0.2] - 2025-09-09
+### Documentación
+- [✅] Actualización de la documentación de instalación, uso y análisis de rendimiento; incluye ejemplos y validaciones
+- [✅] Implementación de validaciones de límites en QuantumCircuit y compuertas cuánticas
+- [✅] Añadidas pruebas para límites de qubits y validaciones de compuertas
 
-**Nota**: Esta es la primera versión 0.0.1 de Qubit Simulator. La API se considera estable y seguirá semantic versioning para cambios futuros.
+
+**Nota**: Esta es la primera versión 0.0.1 de QKits Simulator. La API se considera estable y seguirá semantic versioning para cambios futuros.
