@@ -19,8 +19,27 @@ export class QuantumCircuit {
     private measurementService?: IQuantumMeasurement,
     initialState?: QuantumState
   ) {
+    // Validaciones básicas
     if (qubitCount <= 0) {
       throw new Error("Quantum circuit must have at least 1 qubit");
+    }
+
+    // Límite de seguridad para evitar problemas de memoria
+    const MAX_QUBITS = 25;
+    if (qubitCount > MAX_QUBITS) {
+      throw new Error(
+        `Quantum circuit limited to ${MAX_QUBITS} qubits to prevent memory issues. ` +
+        `Requested: ${qubitCount} qubits would require ~${(Math.pow(2, qubitCount) * 16 / 1024 / 1024).toFixed(2)} MB of RAM.`
+      );
+    }
+
+    // Advertencia para circuitos grandes
+    if (qubitCount > 15) {
+      const estimatedMemoryMB = (Math.pow(2, qubitCount) * 16) / (1024 * 1024);
+      console.warn(
+        `⚠️  Warning: ${qubitCount}-qubit simulation requires ~${estimatedMemoryMB.toFixed(2)} MB of memory. ` +
+        `Performance may be slow for large quantum states.`
+      );
     }
 
     this.qubitCount = qubitCount;

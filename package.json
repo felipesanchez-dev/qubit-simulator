@@ -30,8 +30,19 @@
     "qubit",
     "simulation",
     "quantum-computing",
-    "gates",
-    "typescript"
+    "quantum-gates",
+    "quantum-circuits",
+    "bell-states",
+    "entanglement",
+    "superposition",
+    "hadamard",
+    "cnot",
+    "physics",
+    "typescript",
+    "javascript",
+    "npm",
+    "quantum-simulator",
+    "quantum-mechanics"
   ],
   "author": {
     "name": "Juan Felipe Reyes Sanchez",

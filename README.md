@@ -76,9 +76,9 @@ _Una librería completa de simulación cuántica que permite simular qubits y co
 
 ## 📦 Instalación
 
-> ⚠️ **Nota**: Esta librería está actualmente en desarrollo (v0.0.1) y aún no ha sido publicada en npm.
+> ⚠️ **Estado Actual**: Esta librería está en desarrollo (v0.0.1) y será publicada próximamente en npm.
 
-### Para desarrollo local:
+### 🚀 Para desarrollo local (actual):
 
 ```bash
 # Clonar el repositorio
@@ -90,13 +90,40 @@ npm install
 
 # Compilar el proyecto
 npm run build
+
+# Ejecutar tests
+npm run test
 ```
 
-### Próximamente en npm:
+### 📦 Una vez publicado en npm:
 
 ```bash
-# Una vez publicado estará disponible como:
+# Instalación básica
 npm install qubit-simulator
+
+# Para TypeScript
+npm install qubit-simulator @types/node
+```
+
+### ⚠️ **Límites importantes de rendimiento:**
+
+| Qubits | Estados | Memoria | Recomendación |
+|--------|---------|---------|---------------|
+| 1-15   | 2¹⁵     | < 1 MB  | ✅ Perfecto para uso educativo |
+| 16-25  | 2²⁵     | 16-512 MB | ⚠️ Precaución: aparecerá advertencia |
+| 26+    | 2²⁶+    | > 1 GB  | ❌ Bloqueado automáticamente |
+
+```typescript
+// ✅ Permitido
+const smallCircuit = QKits.createCircuit(15);
+
+// ⚠️ Con advertencia
+const mediumCircuit = QKits.createCircuit(20); 
+// Warning: 20-qubit simulation requires ~16.00 MB of memory
+
+// ❌ Bloqueado automáticamente  
+const largeCircuit = QKits.createCircuit(30);
+// Error: limited to 25 qubits to prevent memory issues
 ```
 
 ## 🚀 Uso rápido
