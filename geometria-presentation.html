@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometría 3D - Prismas y Cuerpos Redondos</title>
+    <link rel="stylesheet" href="presentation-styles.css">
+</head>
+<body>
+    <div class="presentation-container">
+        <!-- Progress Bar -->
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+        </div>
+
+        <!-- Slide Counter -->
+        <div class="slide-counter">
+            <span id="currentSlide">1</span> / <span id="totalSlides">7</span>
+        </div>
+
+        <!-- Slide 1: Portada -->
+        <div class="slide active" id="slide1">
+            <div class="slide-content title-slide">
+                <h1>Prismas y Cuerpos Redondos</h1>
+                <h2>Geometría Tridimensional</h2>
+                <div class="author-info">
+                    <p class="author">Por: Juan Felipe Reyes Sánchez</p>
+                    <p class="subtitle">Presentación Interactiva de Geometría 3D</p>
+                </div>
+                <div class="geometric-shapes">
+                    <div class="shape-preview cube"></div>
+                    <div class="shape-preview cylinder"></div>
+                    <div class="shape-preview cone"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2: Tipos de Prismas -->
+        <div class="slide" id="slide2">
+            <div class="slide-content">
+                <h1>Tipos de Prismas</h1>
+                <div class="prisms-grid">
+                    <div class="prism-type">
+                        <div class="prism-visual triangular-prism">
+                            <div class="prism-base triangle"></div>
+                            <div class="prism-sides"></div>
+                        </div>
+                        <h3>Prisma Triangular</h3>
+                        <ul>
+                            <li>Base: Triángulo</li>
+                            <li>Caras laterales: 3</li>
+                            <li>Aristas: 9</li>
+                            <li>Vértices: 6</li>
+                        </ul>
+                    </div>
+                    <div class="prism-type">
+                        <div class="prism-visual rectangular-prism">
+                            <div class="prism-base rectangle"></div>
+                            <div class="prism-sides"></div>
+                        </div>
+                        <h3>Prisma Rectangular</h3>
+                        <ul>
+                            <li>Base: Rectángulo</li>
+                            <li>Caras laterales: 4</li>
+                            <li>Aristas: 12</li>
+                            <li>Vértices: 8</li>
+                        </ul>
+                    </div>
+                    <div class="prism-type">
+                        <div class="prism-visual hexagonal-prism">
+                            <div class="prism-base hexagon"></div>
+                            <div class="prism-sides"></div>
+                        </div>
+                        <h3>Prisma Hexagonal</h3>
+                        <ul>
+                            <li>Base: Hexágono</li>
+                            <li>Caras laterales: 6</li>
+                            <li>Aristas: 18</li>
+                            <li>Vértices: 12</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3: Fórmulas de Prismas con Ejemplo -->
+        <div class="slide" id="slide3">
+            <div class="slide-content">
+                <h1>Fórmulas de Área y Volumen - Prismas</h1>
+                <div class="formulas-section">
+                    <div class="formula-box">
+                        <h3>Fórmulas Generales</h3>
+                        <div class="formula">
+                            <strong>Área Total:</strong> A = A<sub>lateral</sub> + 2 × A<sub>base</sub>
+                        </div>
+                        <div class="formula">
+                            <strong>Volumen:</strong> V = A<sub>base</sub> × h
+                        </div>
+                    </div>
+                    
+                    <div class="example-section">
+                        <h3>Ejemplo Paso a Paso</h3>
+                        <div class="example-problem">
+                            <p><strong>Problema:</strong> Calcular el área y volumen de un prisma rectangular con dimensiones:</p>
+                            <p>Largo = 8 cm, Ancho = 5 cm, Altura = 6 cm</p>
+                        </div>
+                        
+                        <div class="solution-steps">
+                            <div class="step">
+                                <strong>Paso 1:</strong> Área de la base<br>
+                                A<sub>base</sub> = largo × ancho = 8 × 5 = 40 cm²
+                            </div>
+                            <div class="step">
+                                <strong>Paso 2:</strong> Área lateral<br>
+                                A<sub>lateral</sub> = Perímetro<sub>base</sub> × altura = (2×8 + 2×5) × 6 = 26 × 6 = 156 cm²
+                            </div>
+                            <div class="step">
+                                <strong>Paso 3:</strong> Área total<br>
+                                A<sub>total</sub> = 156 + 2 × 40 = 156 + 80 = 236 cm²
+                            </div>
+                            <div class="step">
+                                <strong>Paso 4:</strong> Volumen<br>
+                                V = A<sub>base</sub> × altura = 40 × 6 = 240 cm³
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4: Cuerpos Redondos -->
+        <div class="slide" id="slide4">
+            <div class="slide-content">
+                <h1>Cuerpos Redondos</h1>
+                <div class="round-bodies-grid">
+                    <div class="round-body">
+                        <div class="body-visual cylinder-visual">
+                            <div class="cylinder-top"></div>
+                            <div class="cylinder-body"></div>
+                            <div class="cylinder-bottom"></div>
+                        </div>
+                        <h3>Cilindro</h3>
+                        <ul>
+                            <li>2 bases circulares</li>
+                            <li>1 superficie lateral curva</li>
+                            <li>Radio (r) y altura (h)</li>
+                            <li>Eje de simetría</li>
+                        </ul>
+                    </div>
+                    <div class="round-body">
+                        <div class="body-visual cone-visual">
+                            <div class="cone-base"></div>
+                            <div class="cone-surface"></div>
+                            <div class="cone-apex"></div>
+                        </div>
+                        <h3>Cono</h3>
+                        <ul>
+                            <li>1 base circular</li>
+                            <li>1 superficie lateral curva</li>
+                            <li>Radio (r), altura (h), generatriz (g)</li>
+                            <li>Vértice o ápice</li>
+                        </ul>
+                    </div>
+                    <div class="round-body">
+                        <div class="body-visual sphere-visual">
+                            <div class="sphere"></div>
+                            <div class="sphere-highlight"></div>
+                        </div>
+                        <h3>Esfera</h3>
+                        <ul>
+                            <li>Superficie completamente curva</li>
+                            <li>Todos los puntos equidistan del centro</li>
+                            <li>Radio (r) constante</li>
+                            <li>Centro y diámetro</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 5: Fórmulas de Cuerpos Redondos -->
+        <div class="slide" id="slide5">
+            <div class="slide-content">
+                <h1>Fórmulas de Área y Volumen - Cuerpos Redondos</h1>
+                <div class="formulas-grid">
+                    <div class="formula-card">
+                        <h3>Cilindro</h3>
+                        <div class="visual-formula cylinder-icon"></div>
+                        <div class="formulas">
+                            <div class="formula-item">
+                                <strong>Área Total:</strong><br>
+                                A = 2πr² + 2πrh
+                            </div>
+                            <div class="formula-item">
+                                <strong>Volumen:</strong><br>
+                                V = πr²h
+                            </div>
+                            <div class="formula-details">
+                                <small>r = radio, h = altura</small>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="formula-card">
+                        <h3>Cono</h3>
+                        <div class="visual-formula cone-icon"></div>
+                        <div class="formulas">
+                            <div class="formula-item">
+                                <strong>Área Total:</strong><br>
+                                A = πr² + πrg
+                            </div>
+                            <div class="formula-item">
+                                <strong>Volumen:</strong><br>
+                                V = ⅓πr²h
+                            </div>
+                            <div class="formula-details">
+                                <small>r = radio, h = altura, g = generatriz</small>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="formula-card">
+                        <h3>Esfera</h3>
+                        <div class="visual-formula sphere-icon"></div>
+                        <div class="formulas">
+                            <div class="formula-item">
+                                <strong>Área Total:</strong><br>
+                                A = 4πr²
+                            </div>
+                            <div class="formula-item">
+                                <strong>Volumen:</strong><br>
+                                V = ⁴⁄₃πr³
+                            </div>
+                            <div class="formula-details">
+                                <small>r = radio</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 6: Aplicaciones Prácticas -->
+        <div class="slide" id="slide6">
+            <div class="slide-content">
+                <h1>Aplicaciones Prácticas</h1>
+                <div class="applications-grid">
+                    <div class="application-area">
+                        <h3>🏗️ Ingeniería</h3>
+                        <div class="application-examples">
+                            <div class="example">
+                                <strong>Estructuras:</strong> Cálculo de volúmenes de concreto en columnas cilíndricas
+                            </div>
+                            <div class="example">
+                                <strong>Tanques:</strong> Diseño de recipientes de almacenamiento con formas geométricas
+                            </div>
+                            <div class="example">
+                                <strong>Arquitectura:</strong> Cálculo de materiales para edificaciones prismáticas
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="application-area">
+                        <h3>👗 Moda</h3>
+                        <div class="application-examples">
+                            <div class="example">
+                                <strong>Faldas cónicas:</strong> Cálculo de tela necesaria para diseños circulares
+                            </div>
+                            <div class="example">
+                                <strong>Sombreros:</strong> Diseño de formas esféricas y cónicas
+                            </div>
+                            <div class="example">
+                                <strong>Patrones:</strong> Optimización de cortes geométricos en textiles
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="application-area">
+                        <h3>🏭 Industria</h3>
+                        <div class="application-examples">
+                            <div class="example">
+                                <strong>Manufactura:</strong> Cálculo de volúmenes en procesos de producción
+                            </div>
+                            <div class="example">
+                                <strong>Envases:</strong> Diseño optimizado de contenedores cilíndricos
+                            </div>
+                            <div class="example">
+                                <strong>Maquinaria:</strong> Componentes con geometrías específicas
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 7: Módulo Interactivo -->
+        <div class="slide" id="slide7">
+            <div class="slide-content">
+                <h1>🎯 Presentar y Resolver</h1>
+                <div class="interactive-module">
+                    <div class="profile-selection" id="profileSelection">
+                        <h2>Selecciona tu Perfil</h2>
+                        <div class="profile-buttons">
+                            <button class="profile-btn" onclick="selectProfile('engineering')">
+                                🔧 Ingeniería en Sistemas
+                            </button>
+                            <button class="profile-btn" onclick="selectProfile('fashion')">
+                                ✂️ Diseño de Modas
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="problem-section" id="problemSection" style="display: none;">
+                        <div class="problem-statement" id="problemStatement"></div>
+                        <div class="solution-input">
+                            <label for="userAnswer">Tu respuesta:</label>
+                            <input type="number" id="userAnswer" step="0.01" placeholder="Ingresa tu respuesta">
+                            <span id="unitLabel"></span>
+                            <button onclick="checkAnswer()">Verificar</button>
+                        </div>
+                        <div class="feedback" id="feedback"></div>
+                        <button class="reset-btn" onclick="resetModule()">Resolver Otro Problema</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation Controls -->
+        <div class="navigation-controls">
+            <button id="prevBtn" onclick="changeSlide(-1)">‹ Anterior</button>
+            <button id="nextBtn" onclick="changeSlide(1)">Siguiente ›</button>
+        </div>
+
+        <!-- Keyboard Help -->
+        <div class="keyboard-help">
+            <small>Usa las flechas ← → para navegar</small>
+        </div>
+    </div>
+
+    <script src="presentation-script.js"></script>
+</body>
+</html>
